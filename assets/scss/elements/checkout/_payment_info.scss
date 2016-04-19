@@ -1,0 +1,42 @@
+.payment_info{
+	padding-left: $grid-gutter-width*3;
+	
+	@include bp-screen-xs-max{
+		padding-left: $grid-gutter-width*1.5;
+	}
+}
+.payment_info dt{
+	font-weight: 600;
+	display: block;
+	position: relative;
+}
+.payment_info dt:before{
+	@extend .fa;
+	font-size:54px;
+	color: $color_light2;
+	position:absolute;
+	left:-($grid-gutter-width*3);
+	top: 6px;
+	
+	@include bp-screen-xs-max{
+		font-size:30px;
+		left:-($grid-gutter-width*1.5);
+	}
+}
+.payment_info dt.shipping:before{
+	content: '\f0d1';
+}
+.payment_info dt.pickup:before{
+	content: '\f1b3';
+}
+.payment_info dt.klarna:before{
+	content: '\f0f6';
+}
+.payment_info dd{
+	font-weight:300;
+	margin-bottom:1.5em;
+
+	strong{
+		font-weight:600;
+	}
+}

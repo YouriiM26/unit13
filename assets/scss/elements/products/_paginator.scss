@@ -1,0 +1,34 @@
+.paginator{
+	@extend .list-unstyled;
+	@extend .list-inline;
+	background: darken($color_tab_header,5%);
+	display:block;
+	width:100%;
+	margin:0;
+	padding:0;
+
+	li{
+		margin:0;
+		padding:0;
+	}
+	li a{
+		display:inline-block;
+		font-weight:600;
+		padding: $grid-gutter-width/2 $grid-gutter-width *.7;
+		color: $color_body;
+		
+		@include bp-screen-sm-max{
+			padding: $grid-gutter-width/2.5 $grid-gutter-width *.4;
+		}
+
+		&:hover{
+			background: $color-brand;
+			color: $color_white;
+			text-decoration: none;
+		}
+	}
+	li.current a{
+		background: $color-brand;
+		color: $color_white;
+	}
+}

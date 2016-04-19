@@ -1,0 +1,45 @@
+.filters{
+    @include make-col();
+    @include make-col-span(3);
+}
+.filter_content{
+    background-color: $color_white;
+}
+h5{
+    color: $color_brand;
+}
+.filter_content ul{
+    list-style-type: none;
+    padding: 0px 10px 0px 10px;
+}
+.filter_content ul li a{
+    color: $color_body;   
+}
+.woocommerce-product-search{
+    margin-bottom: 1rem;
+}
+.filter_button{
+    display: none;
+}
+.filter_button{
+    background-color: $color_brand;
+    padding: 0.75rem 1.25rem;
+    color: $color_white;
+    cursor: pointer;
+    margin-bottom: 1.875rem;
+}
+.open_filter{
+    display: block !important;
+}
+
+@media (max-width: 544px) {
+    .filters{
+        @include make-col();
+        @include make-col-span(12);
+        display: none;
+    }
+    .filter_button{
+        display: block;
+    }
+}
+

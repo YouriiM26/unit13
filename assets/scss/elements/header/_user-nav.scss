@@ -1,0 +1,115 @@
+.user-nav{
+	@include make-col();
+	@include make-col-span(3);
+
+	@include bp-screen-md-max{
+		@include make-col-span(12);
+	}
+}
+
+.user-nav > ul{
+	@extend .list-inline;
+	margin: 0;
+	color: $color_white;
+}
+.user-nav .account-dd {
+	padding: 0;
+	position: relative;
+	
+	span {
+		background: $color_dark1;
+		display: inline-block;
+		font-size:16px;
+		padding: 18px 36px 17px 36px;
+		cursor: pointer;
+		transition: all 0.4s ease;
+		position: relative;
+		z-index: 11;
+
+		@include bp-screen-lg-max{
+			padding: 18px 24px 17px 24px;
+		}
+
+		&:after {
+			@extend .fa;
+			content: "\f078";
+			font-size: 11px;
+			line-height: 22px;
+			margin-left: $grid-gutter-width/1.5;
+		}
+	}
+	
+	&:hover {
+		span {
+			background: $color_menu_active;
+		}
+		
+		ul {
+			bottom: -160%;
+			opacity: 1;
+			overflow: visible;
+		}
+	}
+	ul{
+		@extend .list-unstyled;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		width: 100%;
+		background: $color_white;
+		z-index: 10;
+		padding: 10px 0;
+		opacity: 0;
+		transition: bottom 0.4s ease, opacity 0.4s ease;
+		
+		li a {
+			padding: 8px 24px;
+			display: block;
+			color: $color_dark2;
+			width: 100%;
+			text-decoration: none;
+			font-weight: 600;
+			
+			&:hover {
+				background: darken($color_white, 4%);
+			}
+		}
+	}
+
+	@include bp-screen-lg{
+		padding: 0;
+		font-size:14px;
+
+		&:after{
+			margin-left: $grid-gutter-width/3;
+		}
+	}
+}
+
+.user-nav ul > .cart {
+	position: relative;
+	float: right;
+	padding: 18px 0 12px;
+}
+.user-nav .cart i {
+	background: url(assets/img/min/cart-icon.svg) no-repeat 0 0;
+	width: 22px;
+	height: 21px;
+	display: inline-block;
+}
+.user-nav .cart .amount {
+	background: $color_brand;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	font-size: 14px;
+	line-height: 22px;
+	border-radius: 50%;
+	color: $color_white;
+	font-weight: 700;
+	text-align: center;
+	position: relative;
+	top: -9px;
+	left: -7px;
+}

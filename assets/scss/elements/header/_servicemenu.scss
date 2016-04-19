@@ -1,0 +1,54 @@
+header .servicemenu {
+	@include make-col();
+	@include make-col-span(9);
+	margin-top: 10px;
+
+	@include bp-screen-sm-max{
+		display: none;
+	}
+	
+	ul {
+		background: $color_dark1;
+		@extend .list-unstyled;
+		margin: 0;
+	}
+	
+	li {
+		display: inline-block;
+	}
+	
+	a {
+		font-size: 15px;
+		font-weight: 600;
+		color: $color_white;
+		text-decoration: none;
+		display: block;
+		padding: $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width/2.1;
+		transition: all 0.4s ease;
+		
+		&:hover {
+			background: $color_menu_active;
+		}
+
+		@include bp-screen-lg{
+			font-size:14px;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+	
+	@include bp-screen-sm-max{
+		ul li a{
+			font-size:13px;
+			padding: $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width/2.1;
+		}
+	}
+
+	@include bp-screen-md-max{
+		@include make-col-span(7);
+
+		ul li + li + li +li{
+			display:none;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.leftbar{
+    @include make-col();
+    @include make-col-span(2);
+}
+.leftbar_content{
+    height: 375px;
+    background-color: $color_dark2;
+}
+
+@media (max-width: 62em){
+    .leftbar{
+        @include make-col();
+        @include make-col-span(12);
+    }
+    
+}

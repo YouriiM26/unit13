@@ -1,0 +1,35 @@
+.usps{
+	@include make-col();
+	@include make-col-span(9);
+	color: $color_white;
+	
+	ul{
+		@extend .list-inline;
+		margin: 16px 0;
+	}
+	ul li{
+		font-size: 14px;
+	}
+	ul li:before{
+		font-size:2em;
+		content:'\b7\a0';
+		display: inline-block;
+		padding-right:6px;
+		line-height: 14px;
+		line-height:14px;
+		position: relative;
+		top:6px;
+	}
+	ul li:first-child:before{
+		display:none;
+	}
+
+	@include bp-screen-lg{
+		ul li{
+			font-size:12px;
+		}
+	}
+	@include bp-screen-md-max{
+		display:none;
+	}
+}

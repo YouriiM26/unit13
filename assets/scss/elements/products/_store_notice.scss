@@ -1,0 +1,20 @@
+.store_notice{
+	border: 1px solid lighten($color_light3,10%);
+}
+.store_notice .wrap{
+	padding:$grid-gutter-width/1.5 $grid-gutter-width/1.8 $grid-gutter-width/3;
+}
+
+.store_notice h4{
+	color: $color-brand;
+	font-weight:900;
+	font-size:20px;
+	margin-bottom: 1em;
+}
+
+.store_notice p{
+	font-size:13px;
+}
+.store_notice p.intro{
+	font-size: 15px;
+}

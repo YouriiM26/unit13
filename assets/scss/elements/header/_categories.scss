@@ -1,0 +1,143 @@
+header .categories {
+	@include make-col();
+	@include make-col-span(3);
+	margin-top: 10px;
+
+	@include bp-screen-md-max{
+		@include make-col-span(5);
+	}
+
+	@include bp-screen-sm-max{
+		@include make-col-span(12);
+		margin-top: 20px;
+		padding: 0;
+	}
+
+	button {
+		background: $color_brand;
+		color: $color_white;
+		font-size: 18px;
+		font-weight: 600;
+		padding: 12px 26px;
+		display: inline-block;
+		width: 100%;
+		text-align: left;
+		border: none;
+		z-index: 10;
+		position: relative;
+		
+		&:after {
+			@extend .fa;
+			content: "\f078";
+			float: right;
+			font-size: 14px;
+			line-height: 26px;
+			transition: transform ease .3s;
+		}
+		&:focus{
+			outline:none !important;
+		}
+		&.active:after{
+			transform: rotate(180deg);
+		}
+	}
+	
+	nav.open {
+		top: 100%;
+		opacity: 1;
+		height: auto;
+		overflow: visible;
+	}
+	
+	nav {
+		position: absolute;
+		padding-right: $grid-gutter-width;
+		width: 100%;
+		z-index: 9;
+		overflow: hidden;
+		height: 0;
+		top: 0;
+		transition: top 0.4s ease, opacity 0.4s ease;
+		opacity: 0;
+		
+		@include bp-screen-sm-max{
+			padding-right: 0;
+		}
+	}
+	
+	nav > ul {
+		@extend .list-unstyled;
+		padding: 15px 0;
+		box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.07);
+		position: relative;
+		background: $color_white;
+		
+		li {
+			&:hover {
+				background: darken($color_white, 4%);
+			}
+			
+			&:hover a:after {
+				color: $color_dark2;
+			}
+		}
+		
+		
+		a {
+			display: block;
+			padding: 7px 26px;
+			color: #262626;
+			font-weight: 600;
+			text-decoration: none;
+			
+			&:after {
+				@extend .fa;
+				content: "\f054";
+				font-size: 11px;
+				line-height: 24px;
+				float: right;
+				color: darken($color_white, 13.9%);
+			}
+		}
+	}
+	
+	nav > ul ul {
+		@extend .list-unstyled;
+		background: darken($color_white, 4%);
+		box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.07);
+		position: absolute;
+		left: 75%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+		padding: 15px 0;
+		transition: left 0.2s ease, opacity 0.2s ease;
+		opacity: 0;
+
+		@include bp-screen-sm-max{
+			display: none;
+		}
+	}
+	
+	nav > ul li:hover a + ul {
+		left: 100%;
+		z-index: -1;
+		opacity: 1;
+		
+		li {
+			background: none;
+		}
+		
+		a:hover {
+			color: $color_brand;
+		}
+		
+		a:after {
+			content: "";
+		}
+	}
+}
+.categories .open h2{
+    display: none;
+}

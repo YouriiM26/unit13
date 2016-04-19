@@ -1,0 +1,74 @@
+form.newsletter{
+	padding: 25px;
+	background: $color-dark2;
+}
+.newsletter_signup{
+	@include make-col;
+	@include make-col-span(9);
+
+	@include bp-screen-md-max{
+		@include make-col-span(12);
+		margin-bottom: $grid-gutter-width;
+	}
+	
+	@include bp-screen-xs-max{
+		
+	}
+}
+.newsletter_signup h3{
+	font-size:20px;
+	font-weight:600;
+	color:$color_white;
+	margin-bottom: $grid-gutter-width/2;
+}
+.newsletter_signup .first_name,
+.newsletter_signup .last_name,
+.newsletter_signup .email_address{
+	@include make-col;
+	@include make-col-span(3.2);
+	padding-right:0;
+
+	label{
+		color:$color_white;
+		font-weight:600;
+		font-size:14px;
+	}
+
+	.form-control{
+		border-radius: 0;
+		background:$color_form_input;
+		color:$color_white;
+		border:1px solid $color_form_input;
+	}
+
+	@include bp-screen-sm-max{
+		@include make-col-span(12);
+		padding-right: $grid-gutter-width/2;
+	}
+}
+.newsletter_signup .form_submit{
+	@include make-col;
+	@include make-col-span(2.4);
+
+	label{
+		visibility: hidden;
+	}
+
+	button{
+		@extend .btn;
+		@extend .btn-block;
+		border-radius: 0;
+		border: none;
+		background:$color-brand;
+		font-size:16px;
+		font-weight:600;
+		color:$color_white;
+		display:block;
+		width:100%;
+		padding:6px 12px 7px;
+	}
+
+	@include bp-screen-sm-max{
+		@include make-col-span(12);
+	}
+}

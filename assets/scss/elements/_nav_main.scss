@@ -1,0 +1,10 @@
+.main_nav .menu{
+	@extend .hidden-xs;
+	@extend .list-unstyled;
+	@extend .list-inline;
+	background:$color_base_light;
+
+	a{
+		color:#000;
+	}
+}

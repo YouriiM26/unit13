@@ -1,0 +1,155 @@
+.itemlist .shop{
+	margin-top:$grid-gutter-width ;	
+}
+
+.itemlist .itemlist_row{
+	@include make-row();
+	width:100%;
+	margin:0;
+}
+.itemlist .wrap{
+	border-bottom: 1px solid $color_breadcrumb_separator;
+	display:table;
+	width:100%;
+	margin: 0 0 $grid-gutter-width*.66 0;
+	padding: 0 0 $grid-gutter-width*.66 0;
+}
+.itemlist .itemlist_row:first-child .wrap{
+	margin-top:0;
+	padding-top:0;
+}
+.itemlist .thumb,
+.itemlist .price,
+.itemlist .total{
+	@include make-col();
+	@include make-col-span(2);
+	
+	@include bp-screen-sm-max{
+		@include make-col-span(4.5);
+	}
+}
+.itemlist .actions{
+	@include make-col();
+	@include make-col-span(1);
+}
+.itemlist .prodname,
+.itemlist .qty{
+	@include make-col();
+	@include make-col-span(3.5);
+
+	a{
+		font-weight:600;
+	}
+}
+
+.itemlist .qty-read {
+	@include make-col();
+	@include make-col-span(1.5);
+}
+.itemlist .thumb,
+.itemlist .price,
+.itemlist .actions,
+.itemlist .prodname,
+.itemlist .qty,
+.itemlist .qty-read,
+.itemlist .total{
+	display: table-cell;
+	vertical-align: middle;
+	height:100%;
+	float:none;
+	
+	@include bp-screen-sm-max{
+		display: block;
+		float: left;
+	}
+}
+
+.itemlist .thumb img{
+	width:100%;
+	height:auto;
+	max-height:64px;
+}
+
+.itemlist .qty{
+	input{
+		display: inline-block;
+		width:51px;
+		height:33px;
+		line-height:33px;
+		font-weight:bold;
+		text-align:center;
+		padding:0;
+		margin:0;
+		border-radius:0;
+		background: $color_form_input_light;
+		border: 1px solid $color_light3;
+	}
+	.itemlist_order_item{
+		background:$color_form_input;
+		color: $color_white;
+		height:33px;
+		line-height:34px;
+		font-size:14px;
+		border: 1px solid $color_form_input;
+		margin:0;
+		padding:0 $grid-gutter-width/3;
+	}
+}
+
+.itemlist .price{
+	font-weight:600;
+	text-align:right;
+}
+
+.itemlist .actions a:before{
+	@extend .fa;
+	content: '\f014';
+	font-size:20px;
+	color:$color_black;
+}
+
+.tab_box footer{
+	text-align: right;
+	padding:  0 $grid-gutter-width $grid-gutter-width;
+	float:none;
+}
+.itemlist_order_list{
+	background: $color-brand;
+	color: $color_white;
+	border:none;
+	display: inline-block;
+	text-align: center;
+	padding:$grid-gutter-width/2 $grid-gutter-width*1.53;
+}
+
+.itemlist .thumb {
+	text-align: center;
+	
+	@include bp-screen-sm-max{
+		@include make-col-span(4);
+		height: 65px;
+		
+		img {
+			max-width:100%;
+		}
+	}
+}
+
+.itemlist .prodname {
+	@include bp-screen-sm-max{
+		@include make-col-span(8);
+		height: 65px;
+		margin: $grid-gutter-width/3 0;
+	}
+}
+
+.itemlist .qty, .itemlist .price {
+	@include bp-screen-sm-max{
+		@include make-col-span(5);
+	}
+}
+.itemlist .actions {
+	@include bp-screen-sm-max{
+		@include make-col-span(2);
+	}
+}

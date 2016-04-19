@@ -1,0 +1,36 @@
+{
+  "name": "divtag-wp-starter",
+  "version": "1.0.0",
+  "description": "",
+  "license": "UNLICENSED",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@divtag.git.beanstalkapp.com:/divtag/divtag_wintersmith_static.git"
+  },
+  "author": "Divtag",
+  "license": "GPL",
+  "devDependencies": {
+    "del": "*",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "^2.0.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "^2.0.1",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-strip-debug": "^1.0.2",
+    "gulp-uglify": "*",
+    "imagemin-pngquant": "^4.0.0"
+  }
+}

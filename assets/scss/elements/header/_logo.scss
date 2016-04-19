@@ -1,0 +1,8 @@
+.logo{
+	@include make-col();
+	@include make-col-span(3);
+
+	@include bp-screen-sm-max{
+		@include make-col-span(6);
+	}
+}

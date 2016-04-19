@@ -1,0 +1,19 @@
+.payment_shipping{
+	background: $color_tab_header;
+	padding: $grid-gutter-width $grid-gutter-width*.9;
+}
+.bankselect{
+	margin-left:$grid-gutter-width;
+	margin-bottom:$grid-gutter-width;
+	margin-right: 10px;
+	display: inline-block;
+	
+	@include bp-screen-xs-max{
+		margin-bottom:$grid-gutter-width/3;
+		
+		+ select {
+			margin-left: 30px;
+			margin-bottom:$grid-gutter-width/2;
+		}
+	}
+}

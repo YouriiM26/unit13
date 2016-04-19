@@ -1,0 +1,93 @@
+.page_content{
+    @include make-col();
+    @include make-col-span(10);
+    
+}
+.content_box{
+    border: 1px solid $color_tab_border;
+    box-shadow: 0px 0px 1.875rem 0.1875rem rgba(0, 0, 0, 0.06);
+    padding: 0px 30px 15px 30px;
+    margin-bottom: 2em;
+}
+.content_box p{
+    margin-bottom: 2em;
+}
+
+@media (max-width: 62em){
+    .content{
+        @include make-col();
+        @include make-col-span(12);
+    }
+    
+}
+
+.banners, .contact_block{
+    padding: 0;
+}
+.left_banner{
+    @include make-col();
+    @include make-col-span(3);
+}
+.right_banner{
+    @include make-col();
+    @include make-col-span(9);
+}
+.left_banner img, .right_banner img{
+    width: 100%;
+}
+.featured{
+    padding: 3.75rem 0px;
+}
+.newsletter_signup{
+    @include make-col();
+    @include make-col-span(9);
+}
+.form_newsletter{
+    padding: 25px;
+    background: $color_dark2;
+}
+.visiting_address{
+    @include make-col();
+    @include make-col-span(3);
+}
+.featured{
+    @include make-col();
+    @include make-col-span(12);
+}
+.prod_heading{
+    min-height: 1px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color: $color_brand;
+}
+.product_list_widget li{
+    @include make-col();
+    @include make-col-span(2);
+    list-style-type: none;
+}
+.product_list_widget{
+    @include make-col();
+    @include make-col-span(12);
+    padding: 0;
+}
+.overlay{
+    padding: 6.5625rem;
+    background: $color_dark2;
+    opacity: 0.9;
+}
+.about{
+    background: transparent url("assets/img/min/home_about.jpg") no-repeat fixed center center / cover;
+    margin: 3.75rem 0px;
+}
+.brand{
+    @include make-col();
+    @include make-col-span(2);
+}
+.brand img{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: 75px;
+    transform: translate(0px, -50%);
+    }

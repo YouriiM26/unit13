@@ -1,0 +1,12 @@
+.payment_methods{
+	margin:$grid-gutter-width 0;
+
+	img{
+		margin-right:$grid-gutter-width*.56;
+		width:auto;
+		height:$grid-gutter-width;
+	}
+	.maestro{
+		margin-top:19px;
+	}
+}

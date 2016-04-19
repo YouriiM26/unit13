@@ -1,0 +1,33 @@
+.shop{
+	margin-bottom: $grid-gutter-width * 3.2;
+}
+.shop .sidebar{
+	@include make-col;
+	@include make-col-span(2);
+
+	&.left{
+		@media (min-width: $screen-md-max){
+			@include make-col-pull(8);
+		}
+		
+		@media (max-width: $screen-md-max){
+			margin-top: $grid-gutter-width;
+		}
+	}
+
+	@media (max-width: $screen-md-max){
+		@include make-col-span(12);
+	}
+}
+.shop .prod_section{
+	@include make-col;
+	@include make-col-span(8);
+
+	@media (min-width: $screen-md-max){
+		@include make-col-push(2);
+	}
+
+	@media (max-width: $screen-md-max){
+		@include make-col-span(12);
+	}
+}

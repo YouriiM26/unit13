@@ -1,0 +1,61 @@
+.about{
+	background:url(../images/home_about.jpg) center center no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+	color:$color_white;
+
+	.overlay{
+		background: $color_home-about;
+		padding:$grid-gutter-width*3.5;
+		
+		@include bp-screen-xs-max{
+			padding:$grid-gutter-width*2 $grid-gutter-width 0;
+		}
+	}
+}
+.about h2{
+	text-align:center;
+	font-size:45px;
+	font-weight:600;
+	margin-bottom:1em;
+	
+	@include bp-screen-xs-max{
+		font-size:28px;
+	}
+}
+.about .about-us{
+	@include make-col();
+	@include make-col-span(4);
+	text-align:center;
+	
+	@media (max-width: $screen-md-max){
+		@include make-col-span(12);
+		margin-bottom: $grid-gutter-width*2;
+	}
+
+	@media (min-width: $screen-lg-min){
+		&.left{
+			@include make-col-offset(1);
+		}
+		&.right{
+			@include make-col-offset(2);
+		}
+	}
+
+	h3{
+		font-size:24px;
+		margin-bottom: 1em;
+		
+		@include bp-screen-xs-max{
+			font-size:18px;
+		}
+	}
+	p{
+		font-size:18px;
+		color: $color_light2;
+		
+		@include bp-screen-xs-max{
+			font-size:16px;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.checkout-control {
+	@include make-row();
+	margin-top: $grid-gutter-width*2;
+}
+
+.checkout-col-right {
+	@include make-col();
+	@include make-col-span(6);
+	
+	@include bp-screen-xs-max{
+		@include make-col-span(12);
+	}
+}
+
+.checkout-col-left {
+	@include make-col();
+	@include make-col-span(6);
+	
+	@include bp-screen-xs-max{
+		@include make-col-span(12);
+	}
+}

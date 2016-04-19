@@ -1,0 +1,30 @@
+{
+  "name": "Divtag-Logivert-Gulp-Setup",
+  "version": "0.0.1",
+  "authors": [
+    "vfreriks <victor@divtag.nl>",
+    "hlin <hayden@divtag.nl>"
+  ],
+  "description": "Divtag setup for Logivert projects",
+  "license": "MIT",
+  "homepage": "www.divtag.nl",
+  "main": "cataloge.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower": "*",
+    "install": "~1.0.4",
+    "magnific-popup": "~1.0.0",
+    "fontawesome": "~4.3.0",
+    "bootstrap": "~4",
+    "slick-carousel": "~1.5.8"
+  },
+  "moduleType": [
+    "node"
+  ]
+}

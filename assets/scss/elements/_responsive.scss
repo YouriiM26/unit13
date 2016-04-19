@@ -1,0 +1,111 @@
+@media (max-width: 1200px){
+    .content_shop h1.page-title{
+        @include make-col();
+        @include make-col-span(12);
+        margin: 0 !important;
+    }
+    .content_shop p.woocommerce-result-count, .content_shop form.woocommerce-ordering{
+        border: none !important;
+    }
+    .content_shop p.woocommerce-result-count{
+        text-align: left !important;
+        padding-left: 0.9375rem !important;
+    }
+}
+@media (max-width: 768px){
+    .content_shop ul.products li.product{
+        @include make-col();
+        @include make-col-span(6);
+        margin: 0px 0px 20px 0px !important;
+    }
+}
+@media (max-width :992px){
+    .woocommerce-product-search input.search-field{
+        width: 100% !important;
+    }
+}
+@media (max-width: 544px) {
+    #billing_first_name_field label, #billing_last_name_field label, #billing_company_field label, #billing_email_field label, #billing_phone_field label, #billing_country_field label, #billing_address_1_field label, #billing_postcode_field label, #billing_city_field label, #account_password_field label, #shipping_first_name_field label, #shipping_last_name_field label, #shipping_company_field label, #shipping_email_field label, #shipping_phone_field label, #shipping_country_field label, #shipping_address_1_field label, #shipping_postcode_field label, #shipping_city_field label, #billing_state_field label, #shipping_state_field,  .woocommerce-page form .form-row-first label, .woocommerce-page form .form-row-last label, .checkout_coupon p{ 
+        @include make-col();
+        @include make-col-span(12);
+        padding: 0;
+    }
+    #billing_first_name_field input, #billing_last_name_field input, #billing_company_field input, #billing_email_field input, #billing_phone_field input, #billing_country_field input, #billing_address_1_field input, #billing_postcode_field input, #billing_city_field input, #account_password_field input, #shipping_first_name_field input, #shipping_last_name_field input, #shipping_company_field input, #shipping_email_field input, #shipping_phone_field input, #shipping_country_field input, #shipping_address_1_field input, #shipping_postcode_field input, #shipping_city_field input, #billing_state_field input, #shipping_state_field input, .woocommerce-page form .form-row input.input-text, .woocommerce-page form .form-row-last input{ 
+        @include make-col();
+        @include make-col-span(12);
+    }
+    .addresses .col-1, .addresses .col-2{
+        @include make-col();
+        @include make-col-span(12);
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .addresses .title h3 {
+        float: none !important;
+    }
+    .content_shop{
+        @include make-col();
+        @include make-col-span(12);
+    }
+    .product .images{
+        @include make-col();
+        @include make-col-span(12);
+        width: auto !important;
+    }
+    .summary{
+        @include make-col();
+        @include make-col-span(12);
+        width: inherit !important;
+    }
+    .summary .cart .quantity input{
+        margin: 0 0 20px 0 !important;
+    }
+    .single-product #content .container .row .content_shop .products li{
+        width: 100% !important;
+        margin-bottom: 25px !important;
+    }
+    #review_form div form p input{
+        width: 100% !important;
+    }
+    .cart tr td.actions input.button{
+        float: left !important;
+    }
+    .content_shop h1.page-title{
+        width: 100% !important;
+        margin: 0 !important;
+        padding-left: 0.75rem;
+    }
+    .content_shop p.woocommerce-result-count, .content_shop form.woocommerce-ordering{
+        border: none !important;
+    }
+    .content_shop p.woocommerce-result-count{
+        @include make-col();
+        @include make-col-span(12);
+        text-align: left !important;
+    }
+    .content_shop form.woocommerce-ordering{
+        @include make-col();
+        @include make-col-span(12);
+        padding-top: 0 !important;
+    }
+    .content_shop ul.products{
+        @include make-col();
+        @include make-col-span(12);
+    }
+    .content_shop ul.products li.product{
+        @include make-col();
+        @include make-col-span(12);
+        margin: 0px 0px 20px 0px !important;
+    }
+    .orderdetails_title{
+        @include make-col();
+        @include make-col-span(12);
+    }
+    .orderdetails_content{
+        @include make-col();
+        @include make-col-span(12);
+    }
+    .woocommerce-product-search input.search-field{
+        width: auto !important;
+    }
+}

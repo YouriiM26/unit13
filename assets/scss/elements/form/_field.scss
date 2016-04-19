@@ -1,0 +1,179 @@
+fieldset {
+	background: $color_tab_header;
+	padding: $grid-gutter-width*.75 $grid-gutter-width*.75 $grid-gutter-width*.25 $grid-gutter-width*.75;
+	margin-bottom: $grid-gutter-width;
+}
+
+.form-field {
+	@include make-row(11px);
+	margin-bottom: 14px;
+	
+	label {
+		color: $color_dark2;
+		font-size: 16px;
+		line-height: 28px;
+
+		.payment_shipping &{
+			line-height:24px;
+			position: relative;
+			padding-left:$grid-gutter-width;
+		}
+	}
+	
+	input[type="text"] {
+		border: 1px solid #cacaca;
+		border-radius: 4px;
+		background: $color_white;
+		padding: 5px 15px;
+	}
+	
+	&.text-field {
+		label {
+			@include make-col(11px);
+			@include make-col-span(3);
+			
+			@include bp-screen-xs-max{
+				@include make-col-span(12);
+			}
+		}
+		
+		input[type="text"] {
+			@include make-col(11px);
+			@include make-col-span(9);
+			
+			@include bp-screen-xs-max{
+				@include make-col-span(12);
+			}
+		}
+	}
+	
+	&.radio-field {
+		@include make-row(0);
+		margin-bottom: 0;
+		
+		input[type="radio"] {
+			visibility: hidden;
+			position: absolute;
+		}
+
+		label .icon{
+			width: $grid-gutter-width*2;
+			height: auto;
+			margin-right: $grid-gutter-width/3;
+
+			&.ideal{
+				width:40px;
+				margin-right: $grid-gutter-width;
+			}
+		}
+		
+		label:before {
+			display: block;
+			content: "";
+			float: left;
+			width: 19px;
+			height: 19px;
+			border-radius: 50%;
+			border: 1px solid darken($color_light3, 3%);
+			background: $color_white;
+			margin-right: 10px;
+			margin-top: 5px;
+			left:0;
+			position:absolute;
+		}
+		
+		label:hover:before {
+			border: 1px solid darken($color_light3, 10%);
+			background: darken($color_white, 5%);
+		}
+		
+		input[type="radio"]:checked + label:before {
+			border: 1px solid darken($color_brand, 15%);
+			background: $color_brand;
+		}
+		
+		@include bp-screen-xs-max{
+			label {
+				padding-left: 30px;
+				font-size: 14px;
+			}
+			label:before {
+				margin-left: -30px;
+			}
+		}
+	}
+	
+	&.edit-field {
+		margin-bottom: 5px;
+		
+		span {
+			@include make-col(11px);
+			@include make-col-span(3);
+			
+			@include bp-screen-sm-max{
+				@include make-col-span(12);
+			}
+		}
+		label {
+			@include make-col(11px);
+			@include make-col-span(6);
+			font-weight: 700;
+			margin: 0;
+			
+			@include bp-screen-sm-max{
+				@include make-col-span(12);
+			}
+		}
+		a {
+			@include make-col(11px);
+			@include make-col-span(3);
+			text-align: right;
+			
+			@include bp-screen-sm-max{
+				@include make-col-span(12);
+			}
+		}
+	}
+	
+	&.textarea-field {
+		@include make-col(11px);
+		@include make-col-span(12);
+		margin-top: $grid-gutter-width;
+		margin-bottom: $grid-gutter-width;
+		
+		textarea {
+			display: block;
+			width: 100%;
+			min-height: 140px;
+			border: 1px solid #cacaca;
+			border-radius: 4px;
+			background: $color_white;
+			padding: 5px 15px;
+		}
+	}
+	
+	&.checkbox-field {
+		@include make-col(11px);
+		@include make-col-span(12);
+		margin-bottom: 0;
+		
+		label {
+			margin-left: 10px;
+			display: inline;
+		}
+	}
+}
+.form-control.inline{
+	display:inline-block;
+	width:auto;
+}
+.form-control-label.col-sm-3{
+	padding-top:0;
+}
+.form-group.row{
+	margin-bottom:$grid-gutter-width;
+
+	&.last{
+		margin-bottom:0;
+	}
+}

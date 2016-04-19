@@ -1,0 +1,65 @@
+.tab_box header ul.checkout li{
+	position:relative;
+
+	&:last-child:after{
+		display:none;
+	}
+	
+	@include bp-screen-sm-max{
+		display: block;
+	}
+}
+.tab_box header ul.checkout li a{
+	font-size:15px;
+	text-align:center;
+
+	@include bp-screen-lg-max{
+		font-size:12px;
+		line-height: 22px;
+	}
+}
+.tab_box header ul.checkout li.current a{
+	color: $color_brand;
+	padding-left:20px;
+	padding-right:20px;
+	
+	@include bp-screen-sm-max{
+		color: $color_tab_button;
+		font-weight: 600;
+	}
+}
+.tab_box header ul.checkout li.current.done a .icon:before{
+	@extend .fa;
+	content: '\f058';
+	
+	@include bp-screen-sm-max{
+		content: "";
+	}
+}
+.tab_box header ul.checkout li:after{
+	@extend .fa;
+	content: '\f061';
+	position:absolute;
+	right:-5px;
+	top:52px;
+	font-size:11px;
+	
+	@include bp-screen-sm-max{
+		content: "";
+	}
+}
+.tab_box header ul.checkout li.done:after{
+	color: $color_brand;
+}
+
+@include bp-screen-sm-max{
+	.tab_box header ul.checkout li br, .tab_box header ul.checkout li i {
+		display: none;
+	}
+	.tab_box header ul.checkout li, .tab_box header ul.checkout li.current.done {
+		display: none;
+	}
+	.tab_box header ul.checkout li.current {
+		display: block;
+	}
+}

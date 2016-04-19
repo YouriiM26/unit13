@@ -1,0 +1,31 @@
+.breadcrumbs{
+	@include make-col;
+	@include make-col-span(12);
+
+	p{
+		margin:0;
+		padding-bottom: 25px;
+	}
+
+	a{
+		font-size:14px;
+		font-weight:600;
+		color: $color_dark1;
+		margin: 0 $grid-gutter-width/4;
+
+		&:before{
+			@extend .fa;
+			font-size:10px;
+			color: $color_breadcrumb_separator;
+			content: '\f054';
+			margin-right: $grid-gutter-width/4;
+		}
+
+		&:first-child{
+			margin-left:0;
+			&:before{
+				display: none;
+			}
+		}
+	}
+}

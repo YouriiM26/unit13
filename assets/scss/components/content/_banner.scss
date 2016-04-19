@@ -1,0 +1,28 @@
+.banners {
+	.side-banner {
+		@include make-col();
+		@include make-col-span(3);
+
+		img{
+			width:100%;
+		}
+
+		@media(max-width:$screen-sm-max){
+			display:none;
+		}
+		
+	}
+	
+	.main-banner {
+		@include make-col();
+		@include make-col-span(9);
+		
+		img {
+			width: 100%;
+		}
+
+		@media(max-width: $screen-sm-max){
+			@include make-col-span(12);
+		}
+	}
+}

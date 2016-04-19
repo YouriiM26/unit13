@@ -1,0 +1,26 @@
+.branding-header {
+	.contact {
+		@include make-col();
+		@include make-col-span(3.5);
+		@include make-col-offset(1.5);
+		font-size: 16px;
+		color: $color_white;
+
+		@include bp-screen-sm-max{
+			@include make-col-span(6);
+			@include make-col-offset(0);
+			font-size: 12px;
+			text-align: right;
+		}
+		
+		img {
+			float: right;
+			
+			@include bp-screen-sm-max{
+				float: left;
+				max-width: 37px;
+				margin-right: 10px;
+			}
+		}
+	}
+}

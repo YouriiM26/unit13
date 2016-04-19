@@ -1,0 +1,93 @@
+/// Bootstrap Breakpoint Mixins
+// Min widths
+@mixin bp-screen-xl {
+	@media only screen and (min-width: $screen-xl-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-lg {
+	@media only screen and (min-width: $screen-lg-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-md {
+	@media only screen and (min-width: $screen-md-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-sm {
+	@media only screen and (min-width: $screen-sm-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-xs {
+	@media only screen and (max-width: $screen-xs-max) {
+		@content;
+	}
+}
+
+// Max widths
+@mixin bp-screen-xl-max {
+	@media only screen and (max-width: $screen-xl-max) {
+		@content;
+	}
+}
+
+@mixin bp-screen-lg-max {
+	@media only screen and (max-width: $screen-lg-max) {
+		@content;
+	}
+}
+
+@mixin bp-screen-md-max {
+	@media only screen and (max-width: $screen-md-max) {
+		@content;
+	}
+}
+
+@mixin bp-screen-sm-max {
+	@media only screen and (max-width: $screen-sm-max) {
+		@content;
+	}
+}
+
+@mixin bp-screen-xs-max {
+	@media only screen and (max-width: $screen-xs-max) {
+		@content;
+	}
+}
+
+// Min/Max widths
+@mixin bp-screen-xl-max-min {
+	@media only screen and (max-width: $screen-xl-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-lg-max-min {
+	@media only screen and (max-width: $screen-lg-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-md-max-min {
+	@media only screen and (max-width: $screen-md-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-sm-max-min {
+	@media only screen and (max-width: $screen-sm-min) {
+		@content;
+	}
+}
+
+@mixin bp-screen-xs-max-min {
+	@media only screen and (max-width: $screen-xs-min) {
+		@content;
+	}
+}
